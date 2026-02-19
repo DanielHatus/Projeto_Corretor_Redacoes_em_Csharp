@@ -1,0 +1,1 @@
+public record RegisterEssayRequestDto(string essay);

@@ -1,0 +1,1 @@
+public record UpdateAccountUserAdminRequestDto(string fullName,string email,string role);

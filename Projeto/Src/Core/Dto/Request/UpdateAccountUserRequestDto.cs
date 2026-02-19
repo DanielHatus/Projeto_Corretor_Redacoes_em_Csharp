@@ -1,0 +1,1 @@
+public record UpdateAccountUserRequestDto(string firstName,string lastName,string email);

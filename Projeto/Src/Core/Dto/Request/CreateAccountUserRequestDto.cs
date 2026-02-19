@@ -1,0 +1,1 @@
+public record CreateAccountUserRequestDto(string firstName,string lastName,string email,string passwordLogin);
