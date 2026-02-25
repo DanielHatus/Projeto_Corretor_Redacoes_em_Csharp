@@ -22,7 +22,7 @@ public class UserDomain{
         return new UserDomain(null,fullName,email,RoleVo.CreateRoleValid("USER"),passwordLogin);
     }
 
-    public static UserDomain ReceivedEntityFromDatabase(long id,FullNameVo fullName,EmailVo email,RoleVo role,PasswordLoginVo passwordLogin){
+    public static UserDomain ReceivedEntityFromDatabase(long? id,FullNameVo fullName,EmailVo email,RoleVo role,PasswordLoginVo passwordLogin){
         return new UserDomain(id!,fullName,email,role,passwordLogin);
     }
 }

@@ -10,7 +10,7 @@ public class PasswordRecoveryDomain{
         this.TimeExpiration=timeExpiration;
     }
     public static  PasswordRecoveryDomain CreatePasswordRecovery(string tokenGenerated){
-      return new PasswordRecoveryDomain(null,tokenGenerated,true,DateTime.Now);  
+      return new PasswordRecoveryDomain(null,tokenGenerated,true,DateTime.Now.AddMinutes(7));  
     }
     public static PasswordRecoveryDomain ReceivedRecoveryDomain(long id,string token,bool isValid,DateTime timeExpiration){
         return new PasswordRecoveryDomain(id,token,isValid,timeExpiration);

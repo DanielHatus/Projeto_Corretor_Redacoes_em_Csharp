@@ -12,7 +12,7 @@ public class FullNameVo{
         string lastNameValid=ValidateName(lastName);
         return new FullNameVo(BuildFullName(firstNameValid,lastNameValid));
     }
-    public static FullNameVo ReceivedFullNameFromDatabase(string fullName){
+    public static FullNameVo ReceivedFullNameFromPersist(string fullName){
         return new FullNameVo(fullName);
     }
     private static string ValidateName(string name){

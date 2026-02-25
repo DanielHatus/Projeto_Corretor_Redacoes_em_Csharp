@@ -11,11 +11,12 @@ public class PasswordLoginVo{
     }
 
 
-    public static PasswordLoginVo CreatePasswordLoginValdid(string password){
-        return new PasswordLoginVo(ValidatePasswordLogin(password));
+    public static PasswordLoginVo CreatePasswordLoginValdid(BCryptPort bCryptPort,string password){
+        string passwordValidated=bCryptPort.EncrypedPassword(ValidatePasswordLogin(password));
+        return new PasswordLoginVo(passwordValidated);
     }
 
-    public static PasswordLoginVo ReceivedPasswordLoginFromDatabase(string password){
+    public static PasswordLoginVo ReceivedPasswordLoginFromPersist(string password){
         return new PasswordLoginVo(password);
     }
 

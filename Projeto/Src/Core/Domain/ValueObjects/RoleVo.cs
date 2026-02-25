@@ -12,7 +12,7 @@ public class RoleVo{
        return new RoleVo(ValidateRole(role)); 
     }
 
-    public static RoleVo ReceivedRoleFromDatabase(string role){
+    public static RoleVo ReceivedRoleFromPersist(string role){
          return new RoleVo(role);
     } 
     private static string ValidateRole(string role){
